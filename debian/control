@@ -1,0 +1,31 @@
+Source: node-d3-polygon
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Build-Depends:
+ debhelper-compat (= 12)
+ , nodejs
+ , pkg-js-tools
+ , rollup
+ , node-rollup-plugin-terser
+ , node-tape <!nocheck>
+Standards-Version: 4.5.1
+Homepage: https://d3js.org/d3-polygon/
+Vcs-Git: https://salsa.debian.org/js-team/node-d3-polygon.git
+Vcs-Browser: https://salsa.debian.org/js-team/node-d3-polygon
+Testsuite: autopkgtest-pkg-nodejs
+
+Package: node-d3-polygon
+Architecture: all
+Depends:
+ ${misc:Depends}
+ , nodejs
+Multi-Arch: foreign
+Description: Operations for two-dimensional polygons
+ This module provides a few basic geometric operations for two-dimensional
+ polygons. Each polygon is represented as an array of two-element arrays
+ [[x1, y1], [x2, y2], …], and may either be closed (wherein the first and last
+ point are the same) or open (wherein they are not).
+ .
+ Node.js is an event-based server-side JavaScript engine.
