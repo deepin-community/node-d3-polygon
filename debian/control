@@ -3,24 +3,22 @@ Section: javascript
 Priority: optional
 Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
 Uploaders: Pirate Praveen <praveen@debian.org>
-Build-Depends:
- debhelper-compat (= 12)
- , nodejs
- , pkg-js-tools
- , rollup
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
  , node-rollup-plugin-terser
  , node-tape <!nocheck>
-Standards-Version: 4.5.1
-Homepage: https://d3js.org/d3-polygon/
-Vcs-Git: https://salsa.debian.org/js-team/node-d3-polygon.git
+ , rollup
+Standards-Version: 4.6.2
 Vcs-Browser: https://salsa.debian.org/js-team/node-d3-polygon
+Vcs-Git: https://salsa.debian.org/js-team/node-d3-polygon.git
+Homepage: https://d3js.org/d3-polygon/
 Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
 
 Package: node-d3-polygon
 Architecture: all
-Depends:
- ${misc:Depends}
- , nodejs
+Depends: ${misc:Depends}
+Provides: ${nodejs:Provides}
 Multi-Arch: foreign
 Description: Operations for two-dimensional polygons
  This module provides a few basic geometric operations for two-dimensional
